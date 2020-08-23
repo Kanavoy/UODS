@@ -190,13 +190,22 @@ def main(args):
 		plt.show(block=True)
 
 if __name__=="__main__":
-    #for p in [(0.5, 0.1), (1.0, 0.1), (1.5, 0.1), (0.5, 0.2), (1.0, 0.2), (1.5, 0.2)]:
-    #    for k in range(0,101):
-    #        args = argv[1:] + [
-    #            "-initial-uncertainty", str(p[0]),
-    #            "-initial-extreme", str(p[1]),
-    #            "-intervention-numb", str(k),
-    #        ]
-            args = argv[1:]
-            print(args)
-            main(args)
+	# for repetition in range(20):
+		# for extremists in range(0,20):
+			# for uncertainty in range(0,20):
+				# args = argv[1:] + [
+					# "-initial-uncertainty", str(uncertainty*0.1),
+					# "-initial-extreme", str(extremists*0.01)
+				# ]
+				# print(args)
+				# main(args)
+	#for p in [(0.5, 0.1), (1.0, 0.1), (1.5, 0.1), (0.5, 0.2), (1.0, 0.2), (1.5, 0.2)]:
+	#    for k in range(0,101):
+	#        args = argv[1:] + [
+	#            "-initial-uncertainty", str(p[0]),
+	#            "-initial-extreme", str(p[1]),
+	#            "-intervention-numb", str(k),
+	#        ]
+			args = argv[1:]
+			print(args)
+			main(args)

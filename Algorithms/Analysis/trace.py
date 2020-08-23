@@ -8,6 +8,8 @@ def analyse(graph,opts,chosen):
 	except AttributeError:
 		opts.analysis.choices = sample(range(opts.graph.n),int(opts.graph.n*opts.analysis.p))
 		opts.analysis.output = {}
+	if not len(chosen[1]):
+		return
 	agent = chosen[1][0]
 	if agent in opts.analysis.choices:
 		try:
