@@ -1,0 +1,35 @@
+0.0 : Tue Sep  8 17:36:47 2020 : Importing modules
+1.8319964408874512 : Tue Sep  8 17:36:49 2020 : Setting up
+['-c', 'snowtide.cfg', '-update-iterations_each', '1', '-intervention-numb', '5']
+1.8319964408874512 : Tue Sep  8 17:36:49 2020 : Begin
+1.8420069217681885 : Tue Sep  8 17:36:49 2020 : Generate Graph
+1.8430006504058838 : Tue Sep  8 17:36:49 2020 : Set Initial Values
+1.8520007133483887 : Tue Sep  8 17:36:49 2020 : Generate Layout
+1.8610057830810547 : Tue Sep  8 17:36:49 2020 : Build updater
+1.865006446838379 : Tue Sep  8 17:36:49 2020 : Perform interventions
+Added agent 10
+Added agent 11
+Added agent 12
+Added agent 13
+Added agent 14
+1.8660058975219727 : Tue Sep  8 17:36:49 2020 : Update Loop
+1.8660058975219727 : Tue Sep  8 17:36:49 2020 : Beginning 10 iterations
+[False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True]
+[False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True]
+choosing a new speaker
+[False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True]
+choosing a new speaker
+choosing a new speaker
+choosing a new speaker
+[False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True]
+[False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True]
+[False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True]
+choosing a new speaker
+[False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True]
+[False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True]
+choosing a new speaker
+[False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True]
+choosing a new speaker
+1.8660058975219727 : Tue Sep  8 17:36:49 2020 : 0 iterations remaining
+[False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True]
+1.8660058975219727 : Tue Sep  8 17:36:49 2020 : Post-Analysis

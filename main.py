@@ -99,10 +99,6 @@ def generate_layout(graph, opts):
 	module = load_alg("Layout", opts.layout.alg)
 	return module.make_layout(graph, opts)
 
-class ValueDict(dict):
-	def __missing__(self, key):
-		return [0 for n in self["opinion"]]
-
 def main(args):
 	timestamp("Begin")
 	opts = parse_args(args)
@@ -113,7 +109,7 @@ def main(args):
 	graph = generate_graph(opts)
 	
 	timestamp("Set Initial Values")
-	graph.values = ValueDict(set_initial(graph, opts))
+	graph.values = set_initial(graph, opts)
 	
 	cmap = plt.cm.bwr
 	new_cmap = colors.LinearSegmentedColormap.from_list(
@@ -206,6 +202,6 @@ if __name__=="__main__":
 	#            "-initial-extreme", str(p[1]),
 	#            "-intervention-numb", str(k),
 	#        ]
-			args = argv[1:]
-			print(args)
-			main(args)
+	args = argv[1:]
+	print(args)
+	main(args)
