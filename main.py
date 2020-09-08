@@ -78,11 +78,13 @@ def parse_args(args):
 algs = {}
 def load_alg(type, name):
 	identifier = type+"-"+name
-	if identifier not in algs:
-		spec = util.spec_from_file_location("", "Algorithms/"+type+"/"+name+".py")
-		module = util.module_from_spec(spec)
-		spec.loader.exec_module(module)
-		algs[identifier] = module
+	# we want to reload algorithms each time this is called,
+	# in case they set any globals
+	#if identifier not in algs:
+	spec = util.spec_from_file_location("", "Algorithms/"+type+"/"+name+".py")
+	module = util.module_from_spec(spec)
+	spec.loader.exec_module(module)
+	algs[identifier] = module
 	return algs[identifier]
 
 def generate_graph(opts):

@@ -9,14 +9,12 @@ def perform_update(graph, opts, agents):
 	x_i = graph.values["opinion"][partner]
 	u_i = graph.values["uncertainty"][partner]
 	int_agent = graph.values["is_intervention_agent"][partner]
-	print(graph.values["is_intervention_agent"])
-
-	while int_agent is True and count < opts.initial.delay_int:
-		print('choosing a new speaker')
-		partner = choice(agents[1])
-		x_i = graph.values["opinion"][partner]
-		u_i = graph.values["uncertainty"][partner]
-		int_agent = graph.values["is_intervention_agent"][partner]
+	# we can't choose new agents in this stage, that's a communication rule,
+	# and is handled by -group-alg. All we can do is abort the communication
+	# and wait for the next iteration
+	if int_agent is True and count < opts.initial.delay_int:
+		print("choosing new agent because", partner, "is one of ours")
+		return
 	for node in agents[0]:
 		x_j = graph.values["opinion"][node]
 		u_j = graph.values["uncertainty"][node]

@@ -5,10 +5,8 @@ def intervene(graph, opts):
 	# add the node to the graph, and its opinion/uncertainty
 	# to the appropriate value lists
 	graph.add_node(agent_num)
-	graph.values["opinion"].append(0)
+	graph.values["opinion"].append(0.0)
 	graph.values["uncertainty"].append(0.1)
-	# if you're adding a value that wasn't set in the initial algorithm,
-	# you have to pre-seed values for the nodes like so
 	if "is_intervention_agent" not in graph.values:
 		graph.values["is_intervention_agent"] = [False for n in graph.nodes]
 	graph.values["is_intervention_agent"].append(True)
